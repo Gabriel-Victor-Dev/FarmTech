@@ -1,6 +1,6 @@
-# > Inicialização e Cabeçalho
+''' ATIVIDADE 1 / Raízes da Inteligência - Preparando o terreno '''
 
-import time
+# Banner
 titulo = """
 ███████╗ █████╗ ██████╗ ███╗   ███╗████████╗███████╗ ██████╗██╗  ██╗
 ██╔════╝██╔══██╗██╔══██╗████╗ ████║╚══██╔══╝██╔════╝██╔════╝██║  ██║
@@ -20,69 +20,30 @@ titulo = """
 for linha in titulo.splitlines():
     print(linha.center(80)) #CONFIGURA A CENTRALIZAÇÃO DO CABEÇALHO.
 
-titulo2 = "| Bem Vindo ao Sistema de Gerenciamento de Culturas |"
+# >CABEÇALHO SECUNDÁRIO
+
+titulo2 = "| ◈ Bem Vindo ao Sistema de Gerenciamento de Culturas ◈ |"
 largura = 80
 
 print("=" * largura)
 print(titulo2.center(largura))
 print("=" * largura)
 
-# > Listas para armazenar dados
-culturas = []
-formas = []
-areas = []
-insumos = []
+# >LISTA PARA ARMAZENAR DADOS
 
-time.sleep(2.0)
-# > Menu principal
-menu = "  ◆ ◇ ◈ MENU PRINCIPAL ◈ ◇ ◆  "
-largura2 = 80
-opcoes = [
-    "1 -> Cadastrar Culturas",
-    "2 -> Listar Culturas",
-    "3 -> Calcular Área de Plantio",
-    "4 -> Calcular Insumos",
-    "5 -> SAIR"
-]
+culturas = [] # nomes das culturas
+formas = [] # figura geométrica para cada cultura (Retângulo ou Círculo)
+areas = [] # áreas plantadas em hectares
+insumos = [] # insumos aplicados
 
-opcao = 0
+# >MENU PRINCIPAL E VALIDAÇÃO DE OPÇÃO
+
+opcao = 0 # >Variável de controle do menu
 
 while opcao != 5:
+    # >MENU
+    menu = " ⚙  MENU PRINCIPAL ⚙ "
+    largura2 = 80
 
-    # Mostrar o menu
-    print("\n" + "╔" + "═" * (largura2 - 2) + "╗")
-    print("║" + menu.center(largura2 - 2) + "║")
-    print("╠" + "═" * (largura2 - 2) + "╣")
-    for item in opcoes:
-        print("║" + item.center(largura2 - 2) + "║")
-    print("╚" + "═" * (largura2 - 2) + "╝")
-
-    # Pedir opção do usuário
-    try:
-        opcao = int(input('  ➔  Digite a opção desejada (1 a 5) 🎯 : '))
-        if opcao not in [1,2,3,4,5]:
-            print("⚠️ Opção inválida! Digite de 1 a 5 ⚠️")
-            continue  # volta para o menu
-    except ValueError:
-        print("⚠️ Opção inválida! Digite de 1 a 5 ⚠️")
-        continue  # volta para o menu
-
-
-    # Função para imprimir mensagem em caixa
-    def caixa_msg(texto, largura=80):
-        print("\n" + "╔" + "═" * (largura - 2) + "╗")
-        print("║" + texto.center(largura - 2) + "║")
-        print("╚" + "═" * (largura - 2) + "╝")
-
-
-    # Processar opção
-    if opcao == 1:
-        caixa_msg("Você escolheu cadastrar culturas")
-    elif opcao == 2:
-        caixa_msg("Você escolheu listar culturas")
-    elif opcao == 3:
-        caixa_msg("Você escolheu calcular área de plantio")
-    elif opcao == 4:
-        caixa_msg("Você escolheu calcular insumos")
-    elif opcao == 5:
-        caixa_msg(" ◆ ◇ ◈ Saindo do programa ◈ ◇ ◆ ")
+    print(menu.center(largura2))
+    print("=" * largura2)
