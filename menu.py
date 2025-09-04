@@ -83,6 +83,7 @@ while opcao != 5:
         print("╚" + "═" * (largura2 - 2) + "╝")
 
         #  LEITURA SEGURA DE OPÇÃO
+
         while True:
             try:
                 opcao = int(input('  ➔  Digite a opção desejada (1 a 5) 🎯 : '))
@@ -94,35 +95,35 @@ while opcao != 5:
 
 # PROCESSAR OPÇÃO
 
-if opcao == 1:
-    caixa_msg("Você escolheu cadastrar culturas")
+        if opcao == 1:
+            caixa_msg("Você escolheu cadastrar culturas")
 
-    # --- CADASTRO DE CULTURA ---
-    nome = leia_cultura("🌾 Cultura (Milho/Cana): ")
-    area = leia_float_positivo("📐 Área plantada (em hectares): ")
+            # --- CADASTRO DE CULTURA ---
+            nome = leia_cultura("🌾 Cultura (Milho/Cana): ")
+            area = leia_float_positivo("📐 Área plantada (em hectares): ")
 
-    culturas.append(nome)
-    areas.append(area)
-    formas.append(None)
-    insumos.append([])  # lista vazia para insumos
+            culturas.append(nome)
+            areas.append(area)
+            formas.append(None)
+            insumos.append([])  # lista vazia para insumos
 
-    print(f"✅ {nome} cadastrada com área de {area:.2f} ha.")
+            print(f"✅ {nome} cadastrada com área de {area:.2f} ha.")
 
-elif opcao == 2:
-    caixa_msg("Listagem de culturas")
-    if not culturas:
-        print("📭 Nenhuma cultura cadastrada ainda.")
-    else:
-        for i, (c, a) in enumerate(zip(culturas, areas), start=1):
-            print(f"{i:02d}. {c:<5} | área: {a:.2f} ha")
+        elif opcao == 2:
+            caixa_msg("Listagem de culturas")
+            if not culturas:
+                print("📭 Nenhuma cultura cadastrada ainda.")
+            else:
+                for i, (c, a) in enumerate(zip(culturas, areas), start=1):
+                    print(f"{i:02d}. {c:<5} | área: {a:.2f} ha")
 
-elif opcao == 3:
-    caixa_msg("Você escolheu calcular área de plantio")
-    # aqui vamos implementar cálculo de área geométrica depois
+        elif opcao == 3:
+            caixa_msg("Você escolheu calcular área de plantio")
+            # aqui vamos implementar cálculo de área geométrica depois
 
-elif opcao == 4:
-    caixa_msg("Você escolheu calcular insumos")
-    # aqui vamos implementar cálculo de insumos depois
+        elif opcao == 4:
+            caixa_msg("Você escolheu calcular insumos")
+            # aqui vamos implementar cálculo de insumos depois
 
-elif opcao == 5:
-    caixa_msg(" ◆ ◇ ◈ Saindo do programa ◈ ◇ ◆ ")
+        elif opcao == 5:
+            caixa_msg(" ◆ ◇ ◈ Saindo do programa ◈ ◇ ◆ ")
