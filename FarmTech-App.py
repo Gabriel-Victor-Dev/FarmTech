@@ -1,6 +1,5 @@
 import time
 
-
 # ---------------- FUNÇÕES ----------------
 def caixa_msg(texto, largura=80):
     """
