@@ -1,70 +1,41 @@
-🌱 FarmTech Solutions
+# 📋 Descrição do Projeto FarmTech Solutions
 
-Bem-vindo ao projeto da Startup FarmTech Solutions!
-Sistema para gerenciamento de culturas agrícolas, utilizando Python para cadastro e cálculo de insumos e R para análise estatística.
+* **Gerenciamento de Culturas**: Um sistema para auxiliar na gestão de áreas agrícolas, com foco em culturas como milho e cana.
 
-farmtech/
-├── python-app/        # Código Python
-│
-└── main.py        # Programa principal: cadastro, cálculo de áreas e insumos
-├── r-app/             # Código R
-│   └── analise.R      # Script R para calcular estatísticas básicas
-├── data/              # Arquivos CSV gerados pelo Python
-│   ├── culturas.csv
-│   └── insumos.csv
-└── README.md          # Este arquivo
+* **Divisão de Tarefas**: O projeto é dividido em duas partes principais:
+    * **Python**: Lida com a parte operacional, como o cadastro de culturas, cálculo de áreas (retângulo e triângulo) e cálculo de insumos.
+    * **R**: Focado na análise de dados, realizando cálculos estatísticos e armazenando os resultados em um banco de dados **SQLite**.
 
-⚙️ Como Rodar
-💻 Python
+* **Fluxo de Dados**: O sistema opera em um fluxo contínuo onde:
+    1.  O script **Python** gera os dados e os salva em arquivos `.csv`.
+    2.  O script **R** lê os arquivos `.csv` para realizar as análises estatísticas e persiste os dados em um banco de dados **SQLite**.
 
-Abra o terminal na pasta python-app/
+* **Estrutura de Pastas**: O projeto é organizado de forma modular, com pastas dedicadas (`python-app/`, `r-app/`, `data/`) para manter o código e os arquivos gerados bem separados.
 
-Execute: python main.py
+* **Foco na Colaboração**: O projeto simula um ambiente de desenvolvimento em equipe, com a recomendação de uso de Git para versionamento e commits claros.
 
-Use o menu para:
+---
 
-Cadastrar culturas 🌾
+### 🎓 **Informações do Desenvolvedor**
 
-Calcular áreas (Retângulo/Triângulo) 📐
+* **Nome:** Gabriel Victor de Alvarenga
+* **Faculdade:** 1º ano • 2025/2 Inteligência Artificial
+* **Projeto:** Fase 1 - Raízes da Inteligência - Preparando o terreno
 
-Calcular insumos 🌱
+---
 
-Arquivos CSV serão gerados automaticamente em ../data/
+### **🔗 Repositório**
 
-📊 R
+Você pode encontrar o código completo deste projeto no GitHub:
 
-Abra o terminal na pasta r-app/
+[https://github.com/Gabriel-Victor-Dev/FarmTech.git](https://github.com/Gabriel-Victor-Dev/FarmTech.git)
 
-Execute: Rscript analise.R
+---
 
-O script vai ler os CSVs gerados pelo Python e mostrar:
 
-Média das áreas e insumos 📊
 
-Desvio padrão ⚡
+### **✉️ Contato**
 
-Total de insumos necessários 🧪
+Para perguntas ou sugestões sobre este projeto, sinta-se à vontade para entrar em contato:
 
-📌 Funcionalidades
-
-✅ Cadastro de culturas (Milho e Cana)
-✅ Cálculo de áreas plantadas (Retângulo e Triângulo)
-✅ Cálculo de insumos por cultura
-✅ Exportação automática para CSV
-✅ Análise estatística em R
-
-💡 Observações
-
-Os arquivos CSV gerados pelo Python estão em data/ e são usados pelo R.
-
-Versionamento com Git: faça commits frequentes e sincronize com o GitHub.
-
-Este projeto simula um ambiente de desenvolvimento colaborativo em equipe.
-
-🔧 Dicas FarmTech
-
-Mantenha Python e R organizados em python-app/ e r-app/
-
-Use mensagens claras nos commits (ex: git commit -m "Adiciona cálculo de insumos")
-
-Sempre verifique os CSVs gerados antes de rodar o R
+* **Email:** [gvictor.devia@gmail.com]
